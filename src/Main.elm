@@ -65,7 +65,7 @@ view toDo =
         [input [ placeholder "Create a new task", value toDo.sentence, onInput Change ] [ ]
         , button []
             [i [class "fas fa-plus"][]]
-        , div [] [ text (String.fromInt (String.length toDo.sentence)) ]]
+        ]
     , ul [class "todoList"] []
     , div [class "footer"] 
         [span[][text ("You have ")

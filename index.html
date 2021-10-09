@@ -15,8 +15,15 @@
     
     <div id="myapp"></div>
     <script>
+        var data = localStorage.getItem('ElmToDo');
+        var jsonData = data ? JSON.parse(data) : null;
         var app = Elm.Main.init({
-            node: document.getElementById('myapp')
+            node: document.getElementById('myapp'),
+            flags: jsonData 
+        });
+        
+        app.ports.setStorage.subscribe(function(state) {
+            localStorage.setItem('ElmToDo', JSON.stringify(state));
         });
     </script>
     <script src="JS/script.js"></script>
