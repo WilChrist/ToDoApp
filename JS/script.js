@@ -1,4 +1,4 @@
-// getting all required elements
+/*// getting all required elements
 const inputBox = document.querySelector(".inputField input");
 const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
@@ -66,4 +66,4 @@ deleteAllBtn.onclick = ()=>{
   listArray = [];
   localStorage.setItem("ElmToDo", JSON.stringify(listArray));
   showTasks();
-}
+}*/
